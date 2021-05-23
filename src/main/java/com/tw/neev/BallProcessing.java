@@ -23,8 +23,8 @@ public class BallProcessing extends PApplet {
 
     @Override
     public void setup() {
-        for(int i = 0; i< BALLCOUNT; i++){
-            BalLList.add(new Ball(i));
+        for(int ballNumber = 0; ballNumber< BALLCOUNT; ballNumber++) {
+            BalLList.add(new Ball(ballNumber));
         }
     }
 
