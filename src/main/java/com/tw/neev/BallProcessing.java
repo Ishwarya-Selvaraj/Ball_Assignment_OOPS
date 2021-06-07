@@ -34,7 +34,7 @@ public class BallProcessing extends PApplet {
     public void draw() {
         for (Ball ball : Balls) {
             circle(ball);
-            ball.increaseXposition();
+            ball.increaseXPosition();
         }
     }
 

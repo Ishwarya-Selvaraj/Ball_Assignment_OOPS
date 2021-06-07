@@ -21,7 +21,7 @@ public class Ball {
         return xPosition;
     }
 
-    public void increaseXposition() {
+    public void increaseXPosition() {
         this.xPosition += this.ballNumber;
     }
 }
