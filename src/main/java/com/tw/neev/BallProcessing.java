@@ -13,7 +13,6 @@ public class BallProcessing extends PApplet {
     ArrayList<Ball> Balls = new ArrayList<>();
 
 
-
     public static void main(String[] args) {
         PApplet.main("com.tw.neev.BallProcessing");
     }
@@ -27,7 +26,7 @@ public class BallProcessing extends PApplet {
     @Override
     public void setup() {
         for (int ballNumber = 1; ballNumber <= BALL_COUNT; ballNumber++) {
-            Balls.add(new Ball(ballNumber,height,FRAME));
+            Balls.add(new Ball(ballNumber, height, FRAME));
         }
     }
 
@@ -35,7 +34,7 @@ public class BallProcessing extends PApplet {
     public void draw() {
         for (Ball ball : Balls) {
             circle(ball);
-            ball.increaseSpeed();
+            ball.increaseXposition();
         }
     }
 

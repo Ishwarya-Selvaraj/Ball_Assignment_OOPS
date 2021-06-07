@@ -21,8 +21,7 @@ public class Ball {
         return xPosition;
     }
 
-    public int increaseSpeed() {
+    public void increaseXposition() {
         this.xPosition += this.ballNumber;
-        return this.xPosition;
     }
 }
