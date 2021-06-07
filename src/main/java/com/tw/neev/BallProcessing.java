@@ -6,10 +6,13 @@ import java.util.ArrayList;
 
 public class BallProcessing extends PApplet {
 
-    public static final int BALLCOUNT = 4;
-    final int width = 600;
-    final int height = 600;
-    ArrayList<Ball> BalLList = new ArrayList<>();
+    public static final int BALL_COUNT = 4;
+    public static final int WIDTH = 600;
+    public static final int HEIGHT = 600;
+    public static final int FRAME = 5;
+    ArrayList<Ball> Balls = new ArrayList<>();
+
+
 
     public static void main(String[] args) {
         PApplet.main("com.tw.neev.BallProcessing");
@@ -18,24 +21,25 @@ public class BallProcessing extends PApplet {
     @Override
     public void settings() {
         super.settings();
-        size(width, height);
+        size(WIDTH, HEIGHT);
     }
 
     @Override
     public void setup() {
-        for(int ballNumber = 1; ballNumber<= BALLCOUNT; ballNumber++) {
-            BalLList.add(new Ball(ballNumber));
+        for (int ballNumber = 1; ballNumber <= BALL_COUNT; ballNumber++) {
+            Balls.add(new Ball(ballNumber,height,FRAME));
         }
     }
 
     @Override
     public void draw() {
-        for (Ball ball : BalLList) {
-            drawBallAnimation(ball);
+        for (Ball ball : Balls) {
+            circle(ball);
+            ball.increaseSpeed();
         }
     }
 
-    private void drawBallAnimation(Ball ball) {
-        ellipse(ball.getXPosition(),ball.getYPosition(height,BALLCOUNT),ball.diameter,ball.diameter);
+    private void circle(Ball ball) {
+        ellipse(ball.getXPosition(), ball.getYPosition(), ball.diameter, ball.diameter);
     }
 }
