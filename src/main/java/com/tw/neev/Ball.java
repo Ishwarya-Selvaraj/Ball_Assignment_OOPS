@@ -1,5 +1,7 @@
 package com.tw.neev;
 
+import processing.core.PApplet;
+
 public class Ball {
     private static final int DIAMETER = 15;
     private final int BALL_NUMBER;
@@ -15,8 +17,8 @@ public class Ball {
         this.xPosition += this.BALL_NUMBER;
     }
 
-    protected void movePosition(BallProcessing ballProcessing) {
-        ballProcessing.ellipse(xPosition, Y_Position, DIAMETER, DIAMETER);
+    protected void move(PApplet pApplet) {
+        pApplet.ellipse(xPosition, Y_Position, DIAMETER, DIAMETER);
         increaseXPosition();
     }
 }

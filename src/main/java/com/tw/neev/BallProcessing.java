@@ -31,7 +31,7 @@ public class BallProcessing extends PApplet {
     @Override
     public void draw() {
         for (Ball ball : balls) {
-            ball.movePosition(this);
+            ball.move(this);
         }
     }
 }
