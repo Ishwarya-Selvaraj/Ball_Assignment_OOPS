@@ -8,16 +8,16 @@ public class Ball {
     private final int Y_Position;
     private int xPosition = 0;
 
-    protected Ball(int ballNumber, int height, int frame) {
-        this.BALL_NUMBER = ballNumber;
-        this.Y_Position = (height * ballNumber) / frame;
+    Ball(int ballNumber, int height, int frame) {
+       this.BALL_NUMBER = ballNumber;
+       this.Y_Position = (height * ballNumber) / frame;
     }
 
     private void increaseXPosition() {
         this.xPosition += this.BALL_NUMBER;
     }
 
-    protected void move(PApplet pApplet) {
+    public void move(PApplet pApplet) {
         pApplet.ellipse(xPosition, Y_Position, DIAMETER, DIAMETER);
         increaseXPosition();
     }
